@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Dosis", sans-serif;
+  background-color: #27ae60;
+}
+.shot-sound {
+  display: none;
+}
+.container {
+  background-color: wheat;
+  width: 1100px;
+  height: 80vh;
+  margin: 5vh 0 0 3vh;
+  cursor: url("../images/shotAim.png"), pointer;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 3rem 0;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+.line {
+  width: 1200px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #27ae60;
+}
+.animal {
+  height: 80px;
+  position: absolute;
+  left: 0px;
+  transition: opacity 0.1s ease;
+}
+.line-one-animal {
+  top: 25px;
+}
+.line-two-animal {
+  top: 130px;
+}
+.line-three-animal {
+  top: 235px;
+}
+.line-four-animal {
+  top: 340px;
+}
+.gain-animation {
+  animation-name: animalMove;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animalMove {
+  100% {
+    transform: translateX(1400px);
+  }
+}
+.meta-data {
+  background-color: #f6f2f2;
+  width: 240px;
+  position: absolute;
+  top: 5vh;
+  left: 1120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  text-align: center;
+  padding: 10px;
+}
+.meta-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.score {
+  margin: 10px 0;
+  font-size: 1.75rem;
+  color: #3498db;
+}
+.game-level-header {
+  margin-bottom: 10px;
+}
+.game-levels {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 5px;
+  cursor: pointer;
+}
+.togel-settings,
+.start-game {
+  font-size: 1.75rem;
+  cursor: pointer;
+  color: #2ecc71;
+  position: relative;
+}
+.start-game:hover,
+.togel-settings:hover {
+  color: #3498db;
+}
+.easy-header {
+  color: #27ae60;
+}
+.meduim-header {
+  color: #2980b9;
+}
+.hard-header {
+  color: #e74c3c;
+}
+.easy,
+.meduim,
+.hard {
+  border-radius: 50%;
+  justify-self: center;
+  font-size: 1.25rem;
+}
+.easy-level {
+  background-color: #27ae60;
+}
+.meduim-level {
+  background-color: #2980b9;
+}
+.hard-level {
+  background-color: #e74c3c;
+}
